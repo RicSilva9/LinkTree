@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./Icons&IMGs/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --switch-bg-url: url(./Icons&IMGs/moon-stars.svg);
+    --highlight-color: rgba(255, 255, 255, 0.02)
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./Icons&IMGs/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --switch-bg-url: url(./Icons&IMGs/sun.svg);
+    --highlight-color: rgba(0, 0, 0, 0.1)
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+  /* PROFILE */
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+#profile {
+    text-align: center; 
+    padding: 24px;
+}
+
+#container { 
+    margin: 54px auto auto;
+    width: 300px;
+    padding: 0 24px;
+}
+
+#profile img {
+    width: 112px;
+    border-radius: 100%;
+    border: solid 5px gray;
+    display: block;
+    margin: auto;
+}
+
+/* switch */
+
+#switch {
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+ 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+/* Link */
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+}
+
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: solid 1px var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background .3s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: solid 1px var(--text-color);
+}
+
+/* Icons */
+
+a ion-icon {
+    padding-right: 15px;
+    font-size: 30px;
+}
+
+#icones a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    
+    transition: background 0.2s;
+}
+
+#icones a:hover {
+    background: var(--highlight-color)
+} 
+
+#icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+    font-size: 30px;
+}
+
+/* Roda pé*/
+
+footer {
+    padding: 24px;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+}
