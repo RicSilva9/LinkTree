@@ -26,6 +26,9 @@
 body {
     background: var(--bg-url) no-repeat top center/cover;
     height: 100vh;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
 body * {
@@ -47,8 +50,7 @@ body * {
 }
 
 #container { 
-    margin: 54px auto auto;
-    width: 100%;
+    width: min(590px, 100%);
     max-width: 590px;
     padding: 0 24px;
 }
