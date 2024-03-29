@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,6 @@
     --highlight-color: rgba(0, 0, 0, 0.1);
     --bgConteiner-color: rgba(255, 255, 255, 0.507);
 }
-
 body {
     background: var(--bg-url) no-repeat top center/cover;
     height: 100vh;
@@ -34,61 +35,63 @@ body {
 }
 
 body * {
-    font-family: 'Inter', sans-serif;
+    font-family: "Sora", sans-serif;
     color: var(--text-color);
 }
 
-p, footer {
+p {
     cursor: default;
 }
 
-p, a, footer {
+p, a {
     font-weight: bold;
 }
 
-  /* PROFILE */
+#profile h1 {
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 8px;
+    font-size: 22px;
+}
 
 #profile p {
-    font-weight: 500;
-    line-height: 24px;
-    margin-top: 8px;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 #profile {
     text-align: center; 
-    padding: 24px;
+    padding: 18px;
 }
 
 #container { 
+    overflow: auto; 
     width: min(590px, 100%);
     max-width: 590px;
+    height: 90vh;
     padding: 0 24px;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: var(--bgConteiner-color);
     -webkit-backdrop-filter: blur(12px);
 }
 
 #profile img {
-    width: 112px;
-    border-radius: 50%;
-    border: solid 2px gray;
-   /*  ESTAVA DANDO ERRO NO CÓDIGO
-    display: block;
-    margin: auto; */
+    max-height: 135px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(255, 0, 255, 0.359);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(255, 0, 255, 0.359);
+    box-shadow: 0px 0px 9px 0px rgba(255, 0, 255, 0.359);
 }
-
-/* switch */
 
 #switch {
     position: relative;
-    width: 64px;
-
-    margin: 4px auto;
+    width: 42px;
+    margin: 10px 0 0 -15px;
 }
 
 #switch button {
-    width: 32px;
-    height: 32px;
+    width: 18px;/*  o height e do mesmo tam */
+    height: 18px;
     background: white var(--switch-bg-url) no-repeat center;
     border: 0;
     border-radius: 50%;
@@ -112,15 +115,13 @@ p, a, footer {
 
 #switch span {
     display: block;
-    width: 64px;
-    height: 24px;
+    width: 38px;
+    height: 18px;
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
 }
-
-/* Link */
 
 ul {
     list-style: none;
@@ -152,26 +153,23 @@ ul li a:hover {
 }
 
 ul li .portfolio {
-    background: rgb(245,233,57);
-    background: linear-gradient(9deg, rgba(245,233,57,1) 0%, rgba(255,121,80,1) 61%, rgba(255,0,245,1) 100%);
+    background: rgb(246,74,247);
+    background: linear-gradient(31deg, rgba(246,74,247,1) 26%, rgba(152,64,210,1) 72%);
     border: 2px solid black;
     transition: transform 0.3s ease;
     color: black;
 }
 
-ul li .portfolio:hover {
-    transform: scale(1.3);
-    background: rgb(245,233,57);
-    background: linear-gradient(9deg, rgba(245,233,57,1) 0%, rgba(255,121,80,1) 61%, rgba(255,0,245,1) 100%);
+.portfolio:hover {
+    transform: scale(1.02);
+    background: rgb(246,74,247);
+    background: linear-gradient(31deg, rgba(246,74,247,1) 26%, rgba(152,64,210,1) 72%);
     border: 2px solid black;
 }
 
-
-/* Icons */
-
 a ion-icon {
     padding-right: 15px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #icones a {
@@ -189,20 +187,40 @@ a ion-icon {
 
 #icones {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    padding: 24px 0;
-    font-size: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px 0;
+    font-size: 20px;
 }
 
-/* Roda pé*/
+.yt-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 30px;
+}
 
-footer {
-    padding: 24px;
-    align-items: center;
-    text-align: center;
-    font-size: 14px;
+.yt-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.html {
+    color: orangered;
+}
+
+.css {
+    color: aqua;
+}
+
+.js {
+    color: yellow;
 }
 
  /* media queries */
