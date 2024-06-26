@@ -17,4 +17,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Fiz esse projeto para linkar minhas redes em um lugar.
+Fiz esse projeto para linkar minhas redes em um só lugar.
