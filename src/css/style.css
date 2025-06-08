@@ -8,26 +8,25 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(../assets/Icons&IMGs/bg_dark.jpeg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --switch-bg-url: url(../assets/Icons&IMGs/moon-stars.svg);
     --highlight-color: rgba(255, 255, 255, 0.02);
-    --bgConteiner-color: rgba(0, 0, 0, 0.521);
+    --bg-color: rgb(15, 15, 15);
 }
 
 .light {
     --text-color: black;
-    --bg-url: url(../assets/Icons&IMGs/bg_light.jpeg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color-hover: rgba(0, 0, 0, 0.2);
     --switch-bg-url: url(../assets/Icons&IMGs/sun.svg);
     --highlight-color: rgba(0, 0, 0, 0.1);
-    --bgConteiner-color: rgba(255, 255, 255, 0.507);
+    --bg-color: rgb(202, 202, 202);
 }
+
 body {
-    background: var(--bg-url) no-repeat top center/cover;
+    background-color: var(--bg-color);
     height: 100vh;
     display: grid;
     place-items: center;
@@ -68,7 +67,7 @@ p, a {
     overflow: auto; 
     width: min(590px, 100%);
     max-width: 590px;
-    height: 90vh;
+    height: 100vh;
     padding: 0 24px;
     border-radius: 15px;
     background-color: var(--bgConteiner-color);
